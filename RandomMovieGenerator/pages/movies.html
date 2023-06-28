@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Random Movie Generator</h1>
+        <div class="form-container">
+          <form>
+            <div class="form-group">
+              <label>Genre:</label>
+              <select class="form-control" id="genre">
+                <option value="all">All</option>
+              
+                <option value="28">Action</option>
+                <option value="12">Adventure</option>
+                <option value="16">Animation</option>
+                <option value="35">Comedy</option>
+                <option value="80">Crime</option>
+                <option value="99">Documentary</option>
+                <option value="18">Drama</option>
+                <option value="10751">Family</option>
+                <option value="14">Fantasy</option>
+                <option value="36">History</option>
+                <option value="27">Horror</option>
+                <option value="10402">Music</option>
+                <option value="9648">Mystery</option>
+                <option value="10749">Romance</option>
+                <option value="878">Science Fiction</option>
+                <option value="53">Thriller</option>
+                <option value="10752">War</option>
+                <option value="37">Western</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Minimum IMDb Rating:</label>
+              <input type="number" class="form-control" id="min-rating" min="0" max="10" step="0.1">
+            </div>
+            <div class="form-group">
+              <label>Year:</label>
+              <input type="number" class="form-control" id="year" min="1900" max="2021">
+            </div>
+            <button type="button" class="btn" id="generate-btn"><span>Generate</span></button>
+            </form>
+            <div class="movie-container"></div>
+            </div>
+            </div>`
+        <script src="../movies.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+.lightbulbL {
+    width: 28px;
+    height: 28px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-lightbulb' viewBox='0 0 16 16'><path d='M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1z'/></svg>");
+  }
+  
+  .lightbulbdark {
+    width: 28px;
+    height: 28px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='yellow' class='bi bi-lightbulb-fill' viewBox='0 0 16 16'><path d='M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5z'/></svg>");
+  }
+  
+body{
+    max-width: 97%;
+}
+#profile {
+  margin-top: 5vh;
+}
+
+
+.wrapper {
+  height: 250px ;
+  width: 250px;
+  position: relative;
+  left: 20px;
+  background: #000;
+  border-radius: 100%;
+  overflow: hidden;
+  transform: rotate(0);
+  top: 80px;
+}
+
+.profile-picture{
+  width: 88%;
+  height: 88%;
+  margin: 6%;
+  border-radius: 100%;
+  object-fit: cover;
+  position: relative;
+  
+  
+}
+
+.wrapper::before{
+  content: '';
+  position: absolute;
+  width: 150%;
+  height: 60%;
+  top: 20%;
+  left: -40%;
+  background: linear-gradient(to right, #9d00ff, #00eaff);
+  z-index: -1;
+  animation: animate 4s linear  infinite;
+
+}
+
+@keyframes animate { 
+  0% {
+    transform: rotate(0);
+  } 100% {
+    transform: rotate(360deg);
+  }
+  
+}
+
+.wrapper::after {
+  content: '';
+  position: absolute;
+  background: #0d1721;
+  border-radius: 100%;
+  z-index: -1;
+  inset: 5px;
+}  
+  .info {
+    position: absolute;
+    width: 88%;
+    height: 88%;
+    left: 6%;
+    top: 100%;
+    border-radius: 100%;
+    backdrop-filter: blur(10px);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    overflow: hidden;
+    transition: 0.5s;
+  }
+
+  .name{
+    color: #000;
+    font-family: arial;
+    font-size: 24px;
+    position: relative;
+    left: 300px;
+    transition: 1s;
+    transition-delay: 0.5s;
+  }
+
+  .bio{
+    position: relative;
+    color: #00eaff;
+    font-family: arial;
+    font-size: 14px;
+    margin-top: 5px;
+    left: 300px;
+    transition: 1s;
+    transition-delay: 0.5s;
+  }
+  .wrapper:hover .info{
+    top: 6%;
+  }
+  .wrapper:hover .name, .wrapper:hover .bio{
+    left: 0;
+  }
+
+  #description {
+    margin-top: 120px !important;
+    width: 80%;
+  }
