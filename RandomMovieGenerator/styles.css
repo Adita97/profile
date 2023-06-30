@@ -3,6 +3,7 @@ body {
 
     background-image: url(images/background.png);
     background-size: cover;
+
     background-repeat: no-repeat;
     background-position: center center;
     box-sizing: border-box;
@@ -10,8 +11,8 @@ body {
 }
 @media screen and (max-width: 1200px){
     body {
-        background-size:cover;
-        height: 100%;
+        background-size: auto;
+        height: auto;
     }
     
 }
