@@ -25,11 +25,16 @@ if(darkMode.classList.contains('lightbulbL')) {
 const projects = document.getElementById("projects");
 const projectsArray = ["SimonGameChallenge","DrumKit","RandomMovieGenerator"]
 
+/*Display each project*/
+
 projectsArray.forEach(elm => {
     const newDiv = document.createElement("div");
-    newDiv.classList.add("col-md-4", "text-center" , "my-3", "project-image")
-    newDiv.innerText = elm;
-    newDiv.textContent = elm.replace(/([A-Z])/g, ' $1').trim();
+    newDiv.classList.add("col-md-4", "text-center" , "my-3", "mx-auto", "project-image")
+   
+    // newDiv.textContent = elm.replace(/([A-Z])/g, ' $1').trim();
+    let elmSpace = elm.replace(/([A-Z])/g, ' $1').trim();
+    console.log(elmSpace)
+    newDiv.innerHTML = "<h4>"+ elmSpace + "</h4>";
     const link = document.createElement("a")
     link.setAttribute("href", elm + "/" + "index.html")
     const image = document.createElement("img");

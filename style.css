@@ -26,7 +26,7 @@ body{
   height: 250px ;
   width: 250px;
   position: relative;
-  left: 20px;
+
   background: #000;
   border-radius: 100%;
   overflow: hidden;
@@ -123,4 +123,40 @@ body{
   #description {
     margin-top: 120px !important;
     width: 80%;
+  }
+  .footer {
+    align-items: center;
+    height: auto;
+    padding: 10px 3rem;
+    justify-content: center;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000;
+
+
+  }
+
+form input {
+  padding: 10px;
+  width: 300px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  text-align: center;
+}
+
+  .myBTN {
+    border: 1px white solid;
+    padding: 10px 35px;
+    border-radius: 30px;
+  }
+
+  .links {
+    display: block !important;
+  }
+
+  .footer-link{
+    display: block;
   }
